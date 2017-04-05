@@ -1,0 +1,63 @@
+<% provide(:page_title, @post.title) %>
+<% provide(:blog_active, 'active') %>
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@bomberstech" />
+<meta name="twitter:title" content="<%= @post.title %>" />
+<meta name="twitter:description" content="<%= truncate(@post.description, length: 20) %>" />
+<meta name="twitter:image" content="<%= @post.banner_image_url %>" />
+  <div class="row">
+   <div class="col-md-1 col-lg-2"></div>
+   <div class="col-md-10 col-lg-8 text-xs-center">
+
+     <h1><%= @post.title %></h1>
+     <!-- <%= @post.banner_image_url %> -->
+     <!-- <%= truncate(@post.description, length: 20) %> -->
+
+
+     <p><%= @post.display_day_published%></p>
+     <div class="card-topper">
+
+     <%=@post.body.html_safe %>
+     </div>
+
+     <!-- <div class="autor-bio">
+       <span class='light'> By <h8><%= @post.autor.name %></h8> </span>
+
+     </div> -->
+
+
+     <a href="https://twitter.com/bomberstech" target="_blank"><img src="https://lh5.googleusercontent.com/-xZVxH6CsUaQ/UefWwgi8o3I/AAAAAAAAEdk/reo5XS6z8-8/s32-no/twitter.png"></a>
+     <a href="https://www.facebook.com/BombersTech-253105425160044/" target="_blank"><img src="https://lh3.googleusercontent.com/-H8xMuAxM-bE/UefWwJr2vwI/AAAAAAAAEdY/N5I41q19KMk/s32-no/facebook.png"></a>
+     <!-- <iframe src="http://www.facebook.com/plugins/like.php?href=http://tuweb.com/&layout=button_count&show_faces=true&width=450&action=like&font=trebuchet+ms&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe> -->
+     <div id="disqus_thread"></div>
+     <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58cfdee1210231f2"></script> -->
+
+     <noscript>
+       Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+     </noscript>
+
+
+   </div>
+ </div>
+ <!-- <div class="addthis_inline_share_toolbox"></div> -->
+ <script>
+
+ /**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+ var disqus_config = function () {
+ this.page.url = '<%= request.original_url %>';  // Replace PAGE_URL with your page's canonical URL variable
+ this.page.identifier = '<%= @post.slug %> '// Replace PAGE_IDENTIFIER with your page's unique identifier variable
+ };
+
+ (function() { // DON'T EDIT BELOW THIS LINE
+ var d = document, s = d.createElement('script');
+ s.src = 'https://bomberstech.disqus.com/embed.js';
+ s.setAttribute('data-timestamp', +new Date());
+ (d.head || d.body).appendChild(s);
+ })();
+
+ </script>
+ <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58cfdee1210231f2"></script>
