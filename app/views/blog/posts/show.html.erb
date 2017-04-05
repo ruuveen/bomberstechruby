@@ -1,16 +1,20 @@
 <% provide(:page_title, @post.title) %>
 <% provide(:blog_active, 'active') %>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@bomberstech" />
 <meta name="twitter:title" content="<%= @post.title %>" />
 <meta name="twitter:description" content="<%= truncate(@post.description, length: 20) %>" />
 <meta name="twitter:image" content="<%= @post.banner_image_url %>" />
+
+
   <div class="row">
    <div class="col-md-1 col-lg-2"></div>
    <div class="col-md-10 col-lg-8 text-xs-center">
 
      <h1><%= @post.title %></h1>
+
 
 
      <p><%= @post.display_day_published%></p>
