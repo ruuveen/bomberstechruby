@@ -11,15 +11,11 @@
    <div class="col-md-10 col-lg-8 text-xs-center">
 
      <h1><%= @post.title %></h1>
-     <!-- <%= @post.banner_image_url %> -->
-     <!-- <%= truncate(@post.description, length: 20) %> -->
 
 
      <p><%= @post.display_day_published%></p>
-     <div class="card-topper">
-
      <%=@post.body.html_safe %>
-     </div>
+
 
      <!-- <div class="autor-bio">
        <span class='light'> By <h8><%= @post.autor.name %></h8> </span>
