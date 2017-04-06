@@ -43,6 +43,8 @@ end
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
+# TODO: remove once new stable version > 4.0 is released
+# https://rubygems.org/gems/acts-as-taggable-on
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'
 
