@@ -5,13 +5,13 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="article">
 <meta property="og:title" content="<%= @post.title %>">
-<meta property="og:description" content="<%= truncate(@post.description, length: 20) %>">
+<meta property="og:description" content="<%= truncate(@post.description, length: 100) %>">
 <meta property="og:url" content="">
 <meta property="og:site_name" content="BombersTech">
 <meta property="article:publisher" content="https://www.facebook.com/BombersTech-253105425160044">
 <meta property="og:image" content="<%= @post.banner_image_url %>">
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="<%= truncate(@post.description, length: 20) %>" />
+<meta name="twitter:description" content="<%= truncate(@post.description, length: 100) %>" />
 <meta name="twitter:title" content="<%= @post.title %>" />
 <meta name="twitter:site" content="@bomberstech" />
 <meta name="twitter:image" content="<%= @post.banner_image_url %>" />
