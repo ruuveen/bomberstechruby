@@ -2,7 +2,7 @@
   <div class="collapse-bg p-a-1">
     <div class='card'>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">
+        <!-- <li class="list-group-item">
           <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
         </li>
         <li class="list-group-item">
@@ -11,9 +11,23 @@
 
         <li class="list-group-item">
           <%= link_to 'facebook',"https://www.facebook.com/BombersTech-253105425160044" , class: "nav-link #{yield(:blog_active)}"%>
+        </li> -->
+
+        <li class="nav-item">
+          <%= link_to 'Tecnologia', posts_path(tag:'Tecnologia'), class: "nav-link #{yield(:blog_active)}" %>
         </li>
-
-
+        <li class="nav-item">
+          <%= link_to 'Cultura', posts_path(tag:'Cultura'), class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Mundo', posts_path(tag:'Mundo'), class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Ciencia', posts_path(tag:'Ciencia'), class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Video', posts_path(tag:'Video'), class: "nav-link #{yield(:blog_active)}" %>
+        </li>
         <!-- <li class="list-group-item">
           <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
@@ -42,9 +56,10 @@
       &#9776;
     </button>
     <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
-      </li>
+      </li> -->
+      <i class="fa fa-facebook" aria-hidden="true"></i>
 
       <li class="nav-item">
         <%= link_to 'Twitter',"https://twitter.com/bomberstech" , class: "nav-link #{yield(:blog_active)}"%>
@@ -53,7 +68,22 @@
       <li class="nav-item">
         <%= link_to 'Facebook',"https://www.facebook.com/BombersTech-253105425160044" , class: "nav-link #{yield(:blog_active)}"%>
       </li>
-
+      <li class="nav-item">
+        <%= link_to 'Tecnologia', posts_path(tag:'Tecnologia'), class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Cultura', posts_path(tag:'Cultura'), class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Mundo', posts_path(tag:'Mundo'), class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Ciencia', posts_path(tag:'Ciencia'), class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Video', posts_path(tag:'Video'), class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <!-- <a class="navbar-brand" href="<%=posts_path(tag:'XOXO')%>">XOXO</a> -->
       <!-- <li class="nav-item">
         <%= link_to '', about_path, class: "nav-link #{yield(:about_active)}" %>
       </li> -->

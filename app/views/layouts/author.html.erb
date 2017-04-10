@@ -16,6 +16,7 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+
     <div class="container <%= controller_name %> <%= action_name %>">
       <% if flash.any? %>
         <% flash.keys.each do |key| %>
@@ -30,5 +31,6 @@
 
     <%= yield %>
     </div>
+      <%= render 'layouts/footer' %>
   </body>
 </html>
