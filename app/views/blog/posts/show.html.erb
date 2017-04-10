@@ -29,6 +29,8 @@
      <p><%= @post.display_day_published%></p>
      <%=@post.body.html_safe %>
 
+     <div class="fb-like" data-href="https://www.facebook.com/BombersTech/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+     <a href="https://twitter.com/BombersTech" class="twitter-follow-button" data-show-count="false">Follow @BombersTech</a>
      <p>Compartelo:</p>
      <div class="addthis_inline_share_toolbox_3b4g"></div>
 
@@ -72,6 +74,15 @@
  })();
 
  </script>
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
  <!-- Go to www.addthis.com/dashboard to customize your tools -->
  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58cfdee1210231f2"></script>
